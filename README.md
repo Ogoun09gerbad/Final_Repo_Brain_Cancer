@@ -1,19 +1,36 @@
-# Brain Tumor MRI Classification Competition
+# 🧠 Brain Tumor MRI Classification Competition
 
-## Description
-Cette compétition porte sur la classification de tumeurs cérébrales à partir d'images IRM. Les quatre classes sont : Glioma, Meningioma, No Tumor, et Pituitary.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ogoun09gerbad/Final_Repo_Brain_Cancer/blob/main/Brain_Tumor_Competition.ipynb)
 
-## Structure du Répertoire
-- `train.csv` : Données d'entraînement.
-- `test.csv` : Données de test (sans les labels pour les participants).
-- `solution.csv` : Vérité terrain (privée).
-- `sample_submission.csv` : Exemple de format de soumission.
-- `leaderboard.csv` : Classement actuel des participants.
+## 📝 Description
+This competition involves classifying brain MRI images into 4 categories: **Glioma, Meningioma, No Tumor, and Pituitary**. 
 
-## Comment Soumettre
-1. Préparez un fichier CSV avec deux colonnes : `ImageId` et `Expected`.
-2. Assurez-vous que les IDs correspondent à ceux du fichier `test.csv`.
-3. Soumettez votre fichier en le nommant `submission.csv`.
+## 📂 Repository Structure
+- `train.csv`: Training data (Image paths and Labels).
+- `test.csv`: Testing data for inference (Use these paths for your predictions).
+- `solution.csv`: Ground truth labels (Private, used for evaluation).
+- `sample_submission.csv`: Example format for your submission.
+- `leaderboard.csv`: Current rankings based on Accuracy.
+- `model.py`, `train.py`, `test.py`: Modular Python scripts for the pipeline.
 
-## Évaluation
-La métrique d'évaluation est l'**Accuracy** (Précision globale).
+## 🚀 Submission Guide (Step-by-Step)
+
+### Step 1: Set up the Environment
+Click the **Open in Colab** badge above to launch the notebook with all necessary libraries pre-installed.
+
+### Step 2: Run Inference on Test Data
+Load `test.csv` and use your trained model to predict the class for each image path listed.
+
+### Step 3: Format the Submission File
+Create a file named `submission.csv`. It must contain exactly two columns:
+1. `ImageId`: The full path of the image (exactly as found in `test.csv`).
+2. `Expected`: The predicted class name (e.g., `glioma`, `meningioma`).
+
+### Step 4: Submit and Score
+Upload your `submission.csv` to the repository. The leaderboard script will then calculate your **Accuracy** against the `solution.csv`.
+
+## 📊 Evaluation
+The evaluation metric is **Global Accuracy**.
+
+---
+Created by **Binta et Badélé**
